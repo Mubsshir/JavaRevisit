@@ -32,7 +32,7 @@ public class Rectangle {
     public  Integer getArea(){
         return  this.breath*this.width;
     }
-    private Boolean isSquare(){
+    public Boolean isSquare(){
         return Objects.equals(this.width, this.breath);
     }
 }
