@@ -9,7 +9,6 @@ public class Main {
         Customer c2=new Customer("Muzammil");
         SparePart.register(c1);
         SparePart.register(c2);
-
         SparePart.InviteForSale();
     }
 }
