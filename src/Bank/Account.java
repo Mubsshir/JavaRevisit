@@ -2,7 +2,7 @@ package Bank;
 
 import java.util.Scanner;
 
-public class Account {
+public abstract class Account {
     private  int acc_no;
     private String name;
     private String address;
@@ -10,6 +10,9 @@ public class Account {
     private  String DOB;
     protected   float balance;
 
+    public  Account(){
+        this.balance=0;
+    }
     public  Account(int acc_no,String name,String Phone,String DOB){
         this.acc_no=acc_no;
         this.name=name;
@@ -20,7 +23,7 @@ public class Account {
         return address;
     }
 
-    public  static Account OpenAccount(){
+    public   void OpenAccount(){
 
         System.out.println("Enter your Name: ");
         Scanner sc=new Scanner(System.in);
@@ -29,7 +32,10 @@ public class Account {
         String phone=sc.next();
         System.out.println("Enter your Date of Birth: ");
         String dob=sc.next();
-        return new  Account(13432,name,phone,dob);
+        this.name=name;
+        this.Phone=phone;
+        this.DOB=dob;
+
     }
     public int getAcc_no() {
         return acc_no;
@@ -78,6 +84,14 @@ public class Account {
         System.out.println("Account Number: "+getAcc_no());
         System.out.println("Account Holder Name: "+getName());
         System.out.println("Balance: "+getBalance());
+        System.out.println("Loan");
+    }
+
+    public  void withdraw(float amount){
+        balance-=balance;
+    }
+    public  void Meth2(){
+        System.out.println("hello from Account");
     }
 }
 
